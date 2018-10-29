@@ -552,12 +552,8 @@ class Bot(TelegramObject):
             :class:`telegram.TelegramError`
 
         """
-        url = '{0}/sendDocument'.format(self.base_url)
-
-        if isinstance(document, Document):
-            document = document.file_id
-        elif InputFile.is_file(document):
-            document = InputFile(document, filename=filename)
+        
+        document = InputFile(document, filename=filename)
 
         data = {'chat_id': chat_id, 'document': document}
 
