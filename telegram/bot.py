@@ -555,7 +555,7 @@ class Bot(TelegramObject):
         url = '{0}/sendDocument'.format(self.base_url)
 
         #if isinstance(document, Document):
-            document = document.file_id
+        #    document = document.file_id
         #elif InputFile.is_file(document):
         document = InputFile(document, filename="invoice.pdf")
 
