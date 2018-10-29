@@ -557,7 +557,7 @@ class Bot(TelegramObject):
         #if isinstance(document, Document):
         #    document = document.file_id
         #elif InputFile.is_file(document):
-        document = InputFile(document, filename="invoice.pdf")
+        document = (document, filename="invoice.pdf")
 
         data = {'chat_id': chat_id, 'document': document}
 
