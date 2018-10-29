@@ -553,7 +553,7 @@ class Bot(TelegramObject):
 
         """
         
-        document = InputFile(document, filename=filename)
+        #document = InputFile(document, filename=filename)
 
         data = {'chat_id': chat_id, 'document': document}
 
