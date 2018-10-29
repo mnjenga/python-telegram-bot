@@ -552,7 +552,7 @@ class Bot(TelegramObject):
             :class:`telegram.TelegramError`
 
         """
-        
+        url = '{0}/sendDocument'.format(self.base_url)
         #document = InputFile(document, filename=filename)
 
         data = {'chat_id': chat_id, 'document': document}
