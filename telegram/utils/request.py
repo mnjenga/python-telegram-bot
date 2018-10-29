@@ -318,12 +318,12 @@ class Request(object):
                 files = True
 
         # Use multipart upload if we're uploading files, otherwise use JSON
-        if files:
-            result = self._request_wrapper('POST', url, fields=data, **urlopen_kwargs)
-        else:
-            result = self._request_wrapper('POST', url,
-                                           body=json.dumps(data).encode('utf-8'),
-                                           headers={'Content-Type': 'application/json'})
+        #if files:
+        result = self._request_wrapper('POST', url, fields=data, **urlopen_kwargs)
+        #else:
+        #    result = self._request_wrapper('POST', url,
+        #                                   body=json.dumps(data).encode('utf-8'),
+        #                                   headers={'Content-Type': 'application/json'})
 
         return self._parse(result)
 
